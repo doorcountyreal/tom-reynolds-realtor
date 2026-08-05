@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tom Reynolds | Door County Real Estate</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    :root {
+      --navy: #1a2332;
+      --gold: #c9a84c;
+      --cream: #f8f5f0;
+      --white: #ffffff;
+      --light-gray: #e8e5e0;
+      --text: #1a1a1a;
+      --text-light: #555;
+      --font-serif: 'Georgia', 'Times New Roman', serif;
+      --font-sans: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    }
+    body { font-family: var(--font-sans); color: var(--text); background: var(--cream); line-height: 1.6; }
+    a { color: var(--navy); text-decoration: none; }
+    a:hover { color: var(--gold); }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #2a3a50 100%);
+      color: var(--white);
+      padding: 60px 0 50px;
+      text-align: center;
+    }
+    .hero h1 { font-size: 2.8rem; font-weight: 700; margin-bottom: 6px; }
+    .hero h1 span { color: var(--gold); }
+    .hero .subtitle { font-size: 1.1rem; opacity: .85; margin-bottom: 20px; }
+    .hero .badge {
+      display: inline-block; background: var(--gold); color: var(--navy);
+      padding: 8px 24px; font-weight: 700; font-size: .85rem;
+      text-transform: uppercase; letter-spacing: 2px; border-radius: 2px;
+    }
+    .hero .cta {
+      display: inline-block; margin-top: 24px;
+      background: var(--white); color: var(--navy);
+      padding: 14px 40px; font-weight: 700; font-size: 1rem;
+      border-radius: 4px; transition: .2s;
+    }
+    .hero .cta:hover { background: var(--gold); color: var(--navy); }
+
+    /* About */
+    .about {
+      padding: 60px 0;
+      background: var(--white);
+    }
+    .about .container { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+    .about img { width: 100%; border-radius: 4px; border: 2px solid var(--light-gray); }
+    .about h2 { font-size: 1.8rem; color: var(--navy); margin-bottom: 16px; }
+    .about h2 span { color: var(--gold); }
+    .about p { margin-bottom: 14px; font-size: 1.02rem; color: var(--text-light); line-height: 1.7; }
+
+    /* Stats */
+    .stats {
+      background: var(--navy);
+      color: var(--white);
+      padding: 50px 0;
+      text-align: center;
+    }
+    .stats .container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+    .stats .num { font-size: 2.8rem; font-weight: 700; color: var(--gold); }
+    .stats .label { font-size: .9rem; text-transform: uppercase; letter-spacing: 1px; opacity: .8; }
+
+    /* Services */
+    .services {
+      padding: 60px 0;
+      background: var(--cream);
+    }
+    .services h2 { text-align: center; font-size: 1.8rem; color: var(--navy); margin-bottom: 40px; }
+    .services h2 span { color: var(--gold); }
+    .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--light-gray);
+      padding: 30px 24px;
+      text-align: center;
+      transition: .2s;
+    }
+    .service-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,.08); }
+    .service-card .icon { font-size: 2.5rem; margin-bottom: 12px; }
+    .service-card h3 { font-size: 1.1rem; color: var(--navy); margin-bottom: 8px; }
+    .service-card p { font-size: .88rem; color: var(--text-light); }
+
+    /* Testimonials */
+    .testimonials {
+      padding: 60px 0;
+      background: var(--white);
+    }
+    .testimonials h2 { text-align: center; font-size: 1.8rem; color: var(--navy); margin-bottom: 40px; }
+    .testimonials h2 span { color: var(--gold); }
+    .testimonial-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .testimonial {
+      background: var(--cream);
+      padding: 24px;
+      border-left: 4px solid var(--gold);
+      font-style: italic;
+    }
+    .testimonial .author { font-style: normal; font-weight: 700; margin-top: 10px; color: var(--navy); }
+
+    /* Contact */
+    .contact {
+      padding: 60px 0;
+      background: var(--navy);
+      color: var(--white);
+      text-align: center;
+    }
+    .contact h2 { font-size: 1.8rem; margin-bottom: 10px; }
+    .contact h2 span { color: var(--gold); }
+    .contact p { opacity: .85; margin-bottom: 20px; }
+    .contact .phone { font-size: 1.6rem; font-weight: 700; color: var(--gold); }
+    .contact .email { font-size: 1.1rem; margin-top: 6px; }
+
+    /* Footer */
+    footer {
+      background: #111820;
+      color: rgba(255,255,255,.5);
+      text-align: center;
+      padding: 24px 0;
+      font-size: .82rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .about .container { grid-template-columns: 1fr; }
+      .stats .container { grid-template-columns: 1fr; }
+      .service-grid { grid-template-columns: 1fr; }
+      .testimonial-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <div class="badge">Coldwell Banker Real Estate Group</div>
+    <h1>Tom <span>Reynolds</span></h1>
+    <div class="subtitle">Your Door County Real Estate Answer — 25+ Years of Local Expertise</div>
+    <a href="tel:+14144608899" class="cta">📞 (414) 460-8899</a>
+  </div>
+</section>
+
+<!-- About -->
+<section class="about">
+  <div class="container">
+    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80" alt="Door County real estate">
+    <div>
+      <h2>Door County <span>Roots</span>. Proven <span>Results</span>.</h2>
+      <p>With over 25 years of hands-on experience across every side of the industry — buying, selling, managing, renovating, and leasing — Tom Reynolds brings a level of expertise that's hard to find.</p>
+      <p>Most recently, Tom served as Operations Manager for a short-term rental company, managing 45+ properties across the county. That insider knowledge makes him the go-to advisor for vacation homes and income properties.</p>
+      <p>His great-grandfather emigrated from Ireland and established a farm just south of Jacksonport. Tom spent his summers here and knows the peninsula — from Sturgeon Bay to Washington Island — like the back of his hand.</p>
+      <p><strong>Whether you're buying, selling, or investing, Tom delivers honest advice and exceptional service every step of the way.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="stats">
+  <div class="container">
+    <div><div class="num">25+</div><div class="label">Years Experience</div></div>
+    <div><div class="num">45+</div><div class="label">Properties Managed</div></div>
+    <div><div class="num">100%</div><div class="label">Client-First Approach</div></div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="services">
+  <div class="container">
+    <h2>Services <span>I Offer</span></h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <div class="icon">🏠</div>
+        <h3>Residential Sales</h3>
+        <p>Helping families find their perfect Door County home — from cozy cottages to lakefront estates.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">🏢</div>
+        <h3>Commercial Property</h3>
+        <p>Guidance on commercial real estate opportunities throughout the peninsula and beyond.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">🌴</div>
+        <h3>Vacation &amp; Investment</h3>
+        <p>Specialized knowledge of the short-term rental and income property market in Door County.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">📋</div>
+        <h3>Property Management</h3>
+        <p>Operations and management expertise for owners of rental and investment properties.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">🔨</div>
+        <h3>Renovation Consulting</h3>
+        <p>Advice on renovation projects to maximize property value and market appeal.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">🤝</div>
+        <h3>Buyer &amp; Seller Representation</h3>
+        <p>Skilled negotiation and market analysis for buyers and sellers alike.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials">
+  <div class="container">
+    <h2>What <span>Clients Say</span></h2>
+    <div class="testimonial-grid">
+      <div class="testimonial">
+        "Tom went above and beyond to help us find our dream home in Fish Creek. His knowledge of the local market saved us thousands."
+        <div class="author">— Sarah &amp; Mike, Fish Creek</div>
+      </div>
+      <div class="testimonial">
+        "We were selling our family cottage and Tom handled everything with professionalism and care. Couldn't have asked for a better agent."
+        <div class="author">— The Peterson Family, Sister Bay</div>
+      </div>
+      <div class="testimonial">
+        "Tom's experience with rental properties was invaluable. He helped us find the perfect investment property in Sturgeon Bay."
+        <div class="author">— David R., Sturgeon Bay</div>
+      </div>
+      <div class="testimonial">
+        "Hardest working real estate agent I've ever worked with. Tom is responsive, honest, and truly cares about his clients."
+        <div class="author">— Jennifer L., Baileys Harbor</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="contact">
+  <div class="container">
+    <h2>Let's <span>Talk</span></h2>
+    <p>Ready to buy, sell, or invest in Door County? Tom is here to help.</p>
+    <div class="phone">📞 (414) 460-8899</div>
+    <div class="email">✉️ tom.reynolds@cbwisconsin.com</div>
+    <p style="margin-top:20px;font-size:.9rem;">Coldwell Banker Real Estate Group — Fish Creek, WI</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    © 2026 Tom Reynolds — Coldwell Banker Real Estate Group. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>
