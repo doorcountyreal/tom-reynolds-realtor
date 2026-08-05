@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>An Introspective Look at Door County Real Estate Trends — Tom Reynolds</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    :root {
+      --navy: #1a2332;
+      --gold: #c9a84c;
+      --cream: #f8f5f0;
+      --white: #ffffff;
+      --light-gray: #e8e5e0;
+      --text: #1a1a1a;
+      --text-light: #555;
+      --font-serif: 'Georgia', 'Times New Roman', serif;
+      --font-sans: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    }
+    body { font-family: var(--font-sans); color: var(--text); background: var(--cream); line-height: 1.6; }
+    a { color: var(--navy); text-decoration: none; }
+    a:hover { color: var(--gold); }
+    .container { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+
+    /* Navigation bar */
+    .nav-bar {
+      background: var(--navy);
+      padding: 14px 0;
+    }
+    .nav-bar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-bar .brand { color: var(--white); font-weight: 700; font-size: 1.1rem; }
+    .nav-bar .brand span { color: var(--gold); }
+    .nav-bar .back-link { color: rgba(255,255,255,.7); font-size: .9rem; }
+    .nav-bar .back-link:hover { color: var(--gold); }
+
+    /* Article header */
+    .article-header {
+      background: linear-gradient(135deg, var(--navy) 0%, #2a3a50 100%);
+      color: var(--white);
+      padding: 50px 0 40px;
+      text-align: center;
+    }
+    .article-header .badge {
+      display: inline-block;
+      background: var(--gold); color: var(--navy);
+      padding: 6px 18px; font-weight: 700; font-size: .75rem;
+      text-transform: uppercase; letter-spacing: 2px; border-radius: 2px;
+      margin-bottom: 18px;
+    }
+    .article-header h1 { font-size: 2.2rem; line-height: 1.3; margin-bottom: 12px; }
+    .article-header .meta {
+      font-size: .9rem; opacity: .75;
+      font-family: var(--font-sans);
+    }
+
+    /* Article body */
+    .article-body { padding: 50px 0 40px; background: var(--white); }
+    .article-body h2 {
+      font-size: 1.4rem; color: var(--navy);
+      margin: 32px 0 14px; padding-bottom: 6px;
+      border-bottom: 2px solid var(--gold);
+    }
+    .article-body h2:first-of-type { margin-top: 0; }
+    .article-body p {
+      margin-bottom: 16px;
+      font-size: 1.05rem;
+      color: var(--text);
+      line-height: 1.8;
+    }
+    .article-body p strong { color: var(--navy); }
+    .article-body .pullquote {
+      border-left: 4px solid var(--gold);
+      background: var(--cream);
+      padding: 20px 24px;
+      margin: 24px 0;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: var(--text-light);
+    }
+
+    /* Divider */
+    .divider {
+      text-align: center;
+      color: var(--gold);
+      font-size: 1.5rem;
+      letter-spacing: 8px;
+      margin: 30px 0;
+    }
+
+    /* Author bio */
+    .author-bio {
+      background: var(--cream);
+      border: 1px solid var(--light-gray);
+      padding: 24px;
+      margin: 36px 0 0;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    .author-bio .avatar {
+      width: 70px; height: 70px; border-radius: 50%;
+      background: var(--navy); color: var(--gold);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.8rem; font-weight: 700; flex-shrink: 0;
+    }
+    .author-bio .info h4 { font-size: 1rem; color: var(--navy); margin-bottom: 4px; }
+    .author-bio .info p { font-size: .88rem; color: var(--text-light); margin-bottom: 0; line-height: 1.5; }
+    .author-bio .info .contact-link { color: var(--gold); font-weight: 600; }
+
+    /* Tags */
+    .tags {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid var(--light-gray);
+    }
+    .tags .tag {
+      display: inline-block;
+      background: var(--cream);
+      color: var(--text-light);
+      padding: 4px 12px;
+      font-size: .78rem;
+      margin: 3px 4px 3px 0;
+      border-radius: 2px;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,.5);
+      text-align: center;
+      padding: 24px 0;
+      font-size: .82rem;
+    }
+    footer a { color: rgba(255,255,255,.7); }
+    footer a:hover { color: var(--gold); }
+
+    @media (max-width: 600px) {
+      .article-header h1 { font-size: 1.6rem; }
+      .author-bio { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<div class="nav-bar">
+  <div class="container">
+    <div class="brand">Tom <span>Reynolds</span></div>
+    <a href="https://doorcountyreal.github.io/tom-reynolds-realtor/" class="back-link">← Back to Home</a>
+  </div>
+</div>
+
+<!-- Article Header -->
+<section class="article-header">
+  <div class="container">
+    <div class="badge">Market Analysis</div>
+    <h1>An Introspective Look at Door County's Real Estate Market in 2026</h1>
+    <div class="meta">By Tom Reynolds &nbsp;·&nbsp; August 5, 2026</div>
+  </div>
+</section>
+
+<!-- Article Body -->
+<section class="article-body">
+  <div class="container">
+
+    <p>Twenty-five years in this business has taught me one thing above all else: no two years in Door County real estate are the same. Just when you think you've seen every pattern the market can throw at you, the peninsula reveals something new. This year is no exception.</p>
+
+    <p>I've been watching the numbers closely — talking to colleagues, sitting across the table from buyers and sellers, and walking properties from Sturgeon Bay to Washington Island. Here's what I'm seeing.</p>
+
+    <h2>Price Growth Is Slowing — But That's Not a Bad Thing</h2>
+
+    <p>Door County home prices have risen about 11% year-over-year, with the current median around $508,000 according to the latest Redfin data. That's still significant growth, but it's a deceleration from the 15-18% jumps we saw in 2021 through 2023. The blistering pace of the pandemic-era market was never sustainable, and honestly, the cooling is healthy.</p>
+
+    <p>What I'm telling my clients is this: we're returning to a market where fundamentals matter again. Location, condition, and realistic pricing are winning — not just the willingness to waive every contingency. The sale-to-list ratio sits at roughly 99%, which tells me homes are selling at or very close to asking when they're priced right from day one.</p>
+
+    <div class="pullquote">"We're returning to a market where fundamentals matter again. Location, condition, and realistic pricing are winning."</div>
+
+    <h2>The Buyer Mentality Is Changing</h2>
+
+    <p>For the first time in several years, buyers are taking a breath. They're asking tougher questions about property history, flood zones, well and septic conditions, and long-term maintenance costs. They're not just competing for any house — they're looking for the right house, and they're willing to wait for it.</p>
+
+    <p>This shift has been subtle but real. Multiple-offer situations are thinning out. Price reductions are becoming more common, especially on properties that came to market with overly ambitious expectations. For serious buyers, this creates opportunity. For sellers, it means preparation and pricing strategy matter more than ever.</p>
+
+    <h2>Short-Term Rentals &amp; The Housing Supply Question</h2>
+
+    <p>No conversation about Door County real estate in 2026 is complete without addressing the short-term rental dynamic. Having managed over 45 STR properties myself, I've seen both sides of this coin.</p>
+
+    <p>On one hand, vacation rentals drive a meaningful portion of our local economy. They support property owners, management companies, cleaning services, and local businesses that depend on visitor traffic. On the other hand, there's no denying that STR conversions tighten the inventory of modestly priced homes available for year-round residents.</p>
+
+    <p>This tension sits at the center of current policy debates at the county and village levels. Several municipalities are exploring tighter regulations — everything from cap limits to occupancy restrictions and stricter zoning overlays. The challenge, as I see it, is finding balance. Overregulation risks stifling economic activity and reducing property values. Underregulation risks hollowing out our year-round communities. Neither outcome is good for Door County.</p>
+
+    <h2>What I'm Watching in the Second Half of 2026</h2>
+
+    <p>Looking ahead, here are the trends I have my eye on:</p>
+
+    <p><strong>Inventory.</strong> We need more homes on the market. Door County continues to be a destination for remote workers, retirees, and second-home buyers, but the supply of desirable, move-in-ready homes remains tight. New construction is helping at the higher end, but we need more options in the $300K–$500K range to meet demand.</p>
+
+    <p><strong>Interest rates.</strong> While rates have stabilized compared to the wild swings of 2024 and early 2025, they remain elevated relative to the ultra-low era. Buyers are adjusting their expectations, and creative financing strategies are becoming more important in deals.</p>
+
+    <p><strong>Commercial &amp; investment properties.</strong> I'm seeing growing interest in commercial real estate — small retail spaces, mixed-use buildings, and land for development. Door County's economy continues to diversify beyond pure tourism, and investors are taking notice.</p>
+
+    <div class="divider">✦ ✦ ✦</div>
+
+    <p>After a quarter century in this business, I remain convinced that Door County real estate is about more than transactions. It's about helping people find their place — whether that's a weekend cottage where their kids will make summer memories, a primary residence in a community that still knows its neighbors, or an investment that supports their family's future.</p>
+
+    <p>My great-grandfather understood that when he stepped off a boat from Ireland and built a life on a farm south of Jacksonport. I try to honor that legacy by treating every client's journey with the same care and commitment.</p>
+
+    <p>The market will keep changing. That's the only constant. But the fundamentals — hard work, honest advice, and deep local knowledge — never go out of style.</p>
+
+    <p><em>Tom Reynolds is a Broker Associate with Coldwell Banker Real Estate Group in Fish Creek, serving buyers, sellers, and investors across Door County and Northeast Wisconsin.</em></p>
+
+    <!-- Author Bio -->
+    <div class="author-bio">
+      <div class="avatar">TR</div>
+      <div class="info">
+        <h4>Tom Reynolds</h4>
+        <p>Broker Associate with 25+ years of experience in residential, commercial, and investment real estate across Door County. Deep local roots and a passion for helping clients find their place on the peninsula. Reach Tom at <span class="contact-link">(414) 460-8899</span> or <a href="mailto:tomreynolds@coldwellhomes.com" class="contact-link">tomreynolds@coldwellhomes.com</a>.</p>
+      </div>
+    </div>
+
+    <!-- Tags -->
+    <div class="tags">
+      <span class="tag">Door County Real Estate</span>
+      <span class="tag">Market Trends 2026</span>
+      <span class="tag">Short-Term Rentals</span>
+      <span class="tag">Housing Market Analysis</span>
+      <span class="tag">Wisconsin Real Estate</span>
+      <span class="tag">Coldwell Banker</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- Bottom Contact CTA -->
+<div style="background:var(--navy);color:var(--white);text-align:center;padding:40px 20px;">
+  <div class="container">
+    <h3 style="font-size:1.4rem;margin-bottom:6px;">Let's <span style="color:var(--gold);">Talk</span></h3>
+    <p style="opacity:.85;margin-bottom:16px;">Thinking about buying, selling, or investing in Door County? Reach out anytime.</p>
+    <div style="font-size:1.5rem;font-weight:700;color:var(--gold);">📞 (414) 460-8899</div>
+    <div style="font-size:1.1rem;margin-top:6px;">✉️ <a href="mailto:tomreynolds@coldwellhomes.com" style="color:var(--white);">tomreynolds@coldwellhomes.com</a></div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    © 2026 Tom Reynolds — Coldwell Banker Real Estate Group. All rights reserved. &nbsp;·&nbsp; <a href="https://doorcountyreal.github.io/tom-reynolds-realtor/">Back to Home</a>
+  </div>
+</footer>
+
+</body>
+</html>
