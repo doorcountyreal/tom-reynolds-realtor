@@ -3,12 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tom Reynolds | Door County Real Estate Advisor</title>
-  <meta name="robots" content="index,follow">
-  <meta name="description" content="Door County real estate guidance for waterfront homes, second homes, condos and vacation properties with Tom Reynolds.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <title>Door County Real Estate | Tom Reynolds</title>
+  <meta name="description" content="Door County real estate with Tom Reynolds. Explore waterfront homes, second homes and condos in Fish Creek, Sturgeon Bay, Sister Bay and nearby communities.">
+  <link rel="stylesheet" href="assets/fonts.css"><link rel="stylesheet" href="assets/editorial.css">
   <style>
     *,*::before,*::after{box-sizing:border-box}
     :root{
@@ -23,7 +20,7 @@
       --serif:"Cinzel",Georgia,serif;
       --sans:"Inter",Arial,sans-serif;
     }
-    html{scroll-behavior:smooth}
+    html{scroll-behavior:smooth;scroll-padding-top:20px}
     body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-weight:300;line-height:1.65}
     body.menu-open{overflow:hidden}
     img{display:block;width:100%;height:auto}
@@ -57,11 +54,11 @@
     .menu-list a::before{content:"0" counter(item);font-family:var(--sans);font-size:.62rem;letter-spacing:.18em;color:#aaa}
 
     .hero{min-height:100vh;position:relative;display:grid;place-items:center;overflow:hidden;background:#000;color:#fff}
-    .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.38),rgba(0,0,0,.14) 45%,rgba(0,0,0,.52)),url("assets/door-county-shoreline-sunrise.jpg") center/cover no-repeat;transform:scale(1.01)}
+    .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.38),rgba(0,0,0,.14) 45%,rgba(0,0,0,.52)),url("assets/door-county-shoreline-sunrise-1600.webp") center/cover no-repeat;transform:scale(1.01)}
     .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.18),transparent 35%,transparent 70%,rgba(0,0,0,.12))}
     .hero-content{position:relative;z-index:2;text-align:center;width:min(1180px,90vw);padding-top:52px}
     .hero .eyebrow{color:#eee;letter-spacing:.42em}
-    .hero h1{margin:0;font-family:var(--serif);font-size:clamp(3.4rem,7.1vw,7.15rem);font-weight:400;line-height:.98;letter-spacing:.05em;text-transform:uppercase;text-shadow:0 3px 20px rgba(0,0,0,.25)}
+    .hero-name{margin:0;font-family:var(--serif);font-size:clamp(3.4rem,7.1vw,7.15rem);font-weight:400;line-height:.98;letter-spacing:.05em;text-transform:uppercase;text-shadow:0 3px 20px rgba(0,0,0,.25)}
     .hero-subtitle{margin:25px auto 30px;font-family:var(--serif);font-size:clamp(1rem,1.65vw,1.45rem);letter-spacing:.04em}
     .hero-cta{display:inline-flex;align-items:center;justify-content:center;min-width:170px;height:48px;border:1px solid rgba(255,255,255,.8);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;transition:.25s ease}
     .hero-cta:hover{background:#fff;color:#111}
@@ -86,7 +83,7 @@
     .proof-label{display:block;margin-top:9px;color:#aaa;font-size:.61rem;letter-spacing:.18em;text-transform:uppercase}
 
     .promise{min-height:92vh;display:grid;place-items:center;position:relative;color:#fff;background:#050505;overflow:hidden}
-    .promise::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,.44),rgba(0,0,0,.62)),url("assets/door-county-ephraim-harbor.jpg") center/cover;filter:saturate(.72)}
+    .promise::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,.44),rgba(0,0,0,.62)),url("assets/door-county-ephraim-harbor-1600.webp") center/cover;filter:saturate(.72)}
     .promise-inner{position:relative;z-index:1;text-align:center;width:min(820px,88vw)}
     .promise h2{margin:0 0 28px;font-family:var(--serif);font-size:clamp(2.3rem,4.8vw,5.25rem);font-weight:400;line-height:1.12;text-transform:uppercase}
     .promise p{max-width:650px;margin:0 auto 34px;color:#eee;font-size:1.05rem}
@@ -103,7 +100,7 @@
     .service p{margin:0;color:#666;max-width:470px}
 
     .feature{display:grid;grid-template-columns:1.1fr .9fr;min-height:780px;background:var(--warm)}
-    .feature-image{min-height:780px;background:url("assets/door-county-limestone-bluff.jpg") center/cover no-repeat}
+    .feature-image{min-height:780px;background:url("assets/door-county-limestone-bluff-1600.webp") center/cover no-repeat}
     .feature-copy{display:flex;flex-direction:column;justify-content:center;padding:90px clamp(54px,8vw,130px)}
     .feature-copy h2{margin:0 0 27px;font-family:var(--serif);font-size:clamp(2.7rem,4vw,4.8rem);font-weight:400;line-height:1.09;text-transform:uppercase}
     .feature-copy p{margin:0 0 20px;color:#555}
@@ -133,7 +130,7 @@
     .experience-note span{font-size:.61rem;letter-spacing:.14em;text-transform:uppercase;color:#bbb}
 
     .contact{min-height:84vh;position:relative;display:grid;place-items:center;color:#fff;text-align:center;background:#050505;overflow:hidden}
-    .contact::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,.48),rgba(0,0,0,.68)),url("assets/door-county-islands-hero.jpg") center/cover;filter:saturate(.75)}
+    .contact::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,.48),rgba(0,0,0,.68)),url("assets/door-county-islands-hero-1600.webp") center/cover;filter:saturate(.75)}
     .contact-inner{position:relative;z-index:1;width:min(850px,88vw)}
     .contact h2{margin:0 0 24px;font-family:var(--serif);font-size:clamp(3rem,5.8vw,6.4rem);font-weight:400;line-height:1.04;text-transform:uppercase}
     .contact p{max-width:650px;margin:0 auto 32px;color:#e6e6e6}
@@ -144,7 +141,7 @@
 
     footer{background:#050505;color:#aaa;border-top:1px solid rgba(255,255,255,.15);padding:36px 0}
     .footer-row{display:flex;justify-content:space-between;align-items:center;gap:30px;font-size:.59rem;letter-spacing:.13em;text-transform:uppercase}
-    .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
+    .reveal{opacity:1;transform:none}
     .reveal.visible{opacity:1;transform:none}
 
     @media(max-width:1000px){
@@ -164,7 +161,7 @@
       .wrap{width:calc(100% - 34px)}
       .nav{height:78px}
       .wordmark{font-size:.9rem}
-      .hero h1{font-size:clamp(2.6rem,14vw,4.3rem)}
+      .hero-name{font-size:clamp(2.6rem,14vw,4.3rem)}
       .about,.services,.places,.experience{padding:90px 0}
       .about-grid{gap:48px}
       .about-photo{height:540px}
@@ -184,38 +181,26 @@
     }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
   </style>
-
-  <link rel="canonical" href="https://doorcountyreal.github.io/tom-reynolds-realtor/">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:title" content="Tom Reynolds | Door County Real Estate">
-  <meta property="og:description" content="A clearer way to buy and sell Door County property. Waterfront, second homes and personal guidance from Tom Reynolds.">
-  <meta property="og:url" content="https://doorcountyreal.github.io/tom-reynolds-realtor/">
-  <meta property="og:image" content="https://doorcountyreal.github.io/tom-reynolds-realtor/assets/door-county-shoreline-sunrise.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="preload" as="image" href="assets/door-county-shoreline-sunrise.jpg">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "RealEstateAgent", "@id": "https://doorcountyreal.github.io/tom-reynolds-realtor/#agent", "name": "Tom Reynolds", "url": "https://doorcountyreal.github.io/tom-reynolds-realtor/", "image": "https://doorcountyreal.github.io/tom-reynolds-realtor/assets/tom-reynolds-portrait.jpg", "telephone": "+1-414-460-8899", "email": "TomReynolds@coldwellhomes.com", "areaServed": {"@type": "AdministrativeArea", "name": "Door County, Wisconsin"}, "parentOrganization": {"@type": "Organization", "name": "Coldwell Banker Real Estate Group"}, "address": {"@type": "PostalAddress", "streetAddress": "4140 Bluff Ln.", "addressLocality": "Fish Creek", "addressRegion": "WI", "postalCode": "54212", "addressCountry": "US"}}, {"@type": "WebSite", "@id": "https://doorcountyreal.github.io/tom-reynolds-realtor/#website", "url": "https://doorcountyreal.github.io/tom-reynolds-realtor/", "name": "Tom Reynolds | Door County Real Estate", "publisher": {"@id": "https://doorcountyreal.github.io/tom-reynolds-realtor/#agent"}}]}</script>
-  <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
-</head>
-<body>
+<meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="https://doorcountyreal.github.io/tom-reynolds-realtor/"><link rel="preload" as="image" href="assets/door-county-shoreline-sunrise-1600.webp" fetchpriority="high"><link rel="preload" href="assets/cinzel-latin.woff2" as="font" type="font/woff2" crossorigin><link rel="alternate" type="application/rss+xml" title="Door County Field Notes" href="feed.xml"><meta property="og:type" content="website"><meta property="og:title" content="Door County Real Estate | Tom Reynolds"><meta property="og:description" content="Door County real estate with Tom Reynolds. Explore waterfront homes, second homes and condos in Fish Creek, Sturgeon Bay, Sister Bay and nearby communities."><meta property="og:url" content="https://doorcountyreal.github.io/tom-reynolds-realtor/"><meta property="og:image" content="https://doorcountyreal.github.io/tom-reynolds-realtor/assets/door-county-shoreline-sunrise.jpg"><meta property="og:locale" content="en_US"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "RealEstateAgent", "@id": "https://doorcountyreal.github.io/tom-reynolds-realtor/#agent", "name": "Tom Reynolds", "url": "https://doorcountyreal.github.io/tom-reynolds-realtor/", "description": "Personal real estate guidance for Door County buyers, sellers, waterfront property and second homes.", "telephone": "+1-414-460-8899", "email": "TomReynolds@coldwellhomes.com", "image": "https://doorcountyreal.github.io/tom-reynolds-realtor/assets/tom-reynolds-portrait.jpg", "address": {"@type": "PostalAddress", "streetAddress": "4140 Bluff Ln.", "addressLocality": "Fish Creek", "addressRegion": "WI", "postalCode": "54212", "addressCountry": "US"}, "parentOrganization": {"@type": "Organization", "name": "Coldwell Banker Real Estate Group"}, "areaServed": [{"@type": "AdministrativeArea", "name": "Door County, Wisconsin"}, {"@type": "AdministrativeArea", "name": "City of Sturgeon Bay, Wisconsin"}, {"@type": "AdministrativeArea", "name": "Village of Egg Harbor, Wisconsin"}, {"@type": "AdministrativeArea", "name": "Village of Ephraim, Wisconsin"}, {"@type": "AdministrativeArea", "name": "Village of Forestville, Wisconsin"}, {"@type": "AdministrativeArea", "name": "Village of Sister Bay, Wisconsin"}, {"@type": "AdministrativeArea", "name": "Town of Baileys Harbor, Wisconsin"}, {"@type": "AdministrativeArea", "name": "Town of Brussels, Wisconsin"}, {"@type": "AdministrativeArea", "name": "Town of Clay Banks, Wisconsin"}, {"@type": "AdministrativeArea", "name": "Town of Egg Harbor, Wisconsin"}, {"@type": "AdministrativeArea", "name": "Town of Forestville, Wisconsin"}, {"@type": "AdministrativeArea", "name": "Town of Gardner, Wisconsin"}, {"@type": "AdministrativeArea", "name": "Town of Gibraltar, Wisconsin"}, {"@type": "AdministrativeArea", "name": "Town of Jacksonport, Wisconsin"}, {"@type": "AdministrativeArea", "name": "Town of Liberty Grove, Wisconsin"}, {"@type": "AdministrativeArea", "name": "Town of Nasewaupee, Wisconsin"}, {"@type": "AdministrativeArea", "name": "Town of Sevastopol, Wisconsin"}, {"@type": "AdministrativeArea", "name": "Town of Sturgeon Bay, Wisconsin"}, {"@type": "AdministrativeArea", "name": "Town of Union, Wisconsin"}, {"@type": "AdministrativeArea", "name": "Town of Washington, Wisconsin"}], "sameAs": ["https://www.tomreynoldsrealestate.com/"], "knowsAbout": ["Door County real estate", "Waterfront property", "Second homes", "Vacation property ownership", "Seller representation"]}, {"@type": "WebSite", "@id": "https://doorcountyreal.github.io/tom-reynolds-realtor/#website", "name": "Tom Reynolds | Door County Real Estate", "url": "https://doorcountyreal.github.io/tom-reynolds-realtor/", "publisher": {"@id": "https://doorcountyreal.github.io/tom-reynolds-realtor/#agent"}, "inLanguage": "en-US"}, {"@type": "WebPage", "@id": "https://doorcountyreal.github.io/tom-reynolds-realtor/#page", "url": "https://doorcountyreal.github.io/tom-reynolds-realtor/", "name": "Door County Real Estate | Tom Reynolds", "isPartOf": {"@id": "https://doorcountyreal.github.io/tom-reynolds-realtor/#website"}, "about": {"@id": "https://doorcountyreal.github.io/tom-reynolds-realtor/#agent"}, "inLanguage": "en-US"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://doorcountyreal.github.io/tom-reynolds-realtor/"}]}]}</script><style>.hero-topic{font-family:var(--sans);font-size:.72rem;font-weight:400;line-height:1.65}.menu-overlay{overflow-y:auto}.home-local{background:#f3f1ec}.home-journal{background:#fff}.home-video{background:#f5f4f0}.home-lead{max-width:780px;color:#555;margin:25px 0 42px}.home-local .section-title,.home-journal .section-title,.home-video .section-title{max-width:940px}.library-more{display:inline-block;margin-top:35px}.community-links{display:grid;grid-template-columns:repeat(2,1fr);gap:0 38px;margin:35px 0}.community-links a{border-top:1px solid #d4d0c7;padding:23px 0;display:block}.community-links strong{font:400 1.5rem/1.2 var(--serif);display:block}.community-links span{display:block;margin-top:9px;color:#666;font-size:.76rem}.home-journal .editorial-card h2,.home-video .editorial-card h2{font-size:1.55rem}.about-grid>picture{display:block}.about-photo{width:100%}.experience-visual>picture{display:block}@media(max-width:700px){.community-links{grid-template-columns:1fr}.home-local .wrap,.home-journal .wrap,.home-video .wrap{width:calc(100% - 34px)}}</style></head>
+<body><a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <nav class="nav" aria-label="Primary navigation">
-      <div class="nav-left"><a href="#expertise">Expertise</a><a href="#places">Communities</a></div>
+      <div class="nav-left"><a href="#expertise">Expertise</a><a href="communities.html">Communities</a><a href="blog/">Blog</a></div>
       <a class="wordmark" href="#top">Tom Reynolds<small>Door County Real Estate</small></a>
-      <div class="nav-right"><a href="#about">About</a><a href="#contact">Contact</a><button class="menu-button" type="button" aria-label="Open menu" aria-controls="site-menu" aria-expanded="false"><span>Menu</span><span class="menu-lines"><i></i><i></i></span></button></div>
+      <div class="nav-right"><a href="videos.html">Videos</a><a href="about.html">About</a><a href="#contact">Contact</a><button class="menu-button" type="button" aria-label="Open menu" aria-controls="site-menu" aria-expanded="false"><span>Menu</span><span class="menu-lines"><i></i><i></i></span></button></div>
     </nav>
   </header>
 
-  <div id="site-menu" class="menu-overlay" aria-hidden="true">
+  <div id="site-menu" class="menu-overlay" role="dialog" aria-modal="true" aria-label="Site menu" aria-hidden="true">
     <div class="menu-top"><span class="wordmark">Tom Reynolds<small>Door County Real Estate</small></span><button class="menu-close" type="button" aria-label="Close menu">×</button></div>
-    <ol class="menu-list"><li><a href="#top">Home</a></li><li><a href="#about">About Tom</a></li><li><a href="#expertise">Expertise</a></li><li><a href="#places">Communities</a></li><li><a href="#contact">Contact</a></li></ol>
+    <ol class="menu-list"><li><a href="#top">Home</a></li><li><a href="about.html">About Tom</a></li><li><a href="#expertise">Expertise</a></li><li><a href="communities.html">Communities</a><a href="blog/">Blog</a></li><li><a href="#contact">Contact</a></li></ol>
   </div>
 
-  <main>
+  <main id="main">
     <section class="hero" id="top">
       <div class="hero-content reveal visible">
-        <p class="eyebrow">Door County Real Estate Advisor</p>
-        <h1>Tom Reynolds</h1>
+        <h1 class="eyebrow hero-topic">Door County Real Estate Advisor</h1>
+        <p class="hero-name">Tom Reynolds</p>
         <p class="hero-subtitle">A clearer way to buy and sell Door County property.</p>
         <a class="hero-cta" href="#contact">Let’s Connect</a>
       </div>
@@ -224,7 +209,7 @@
 
     <section class="about" id="about">
       <div class="wrap about-grid">
-        <img class="about-photo reveal" src="assets/tom-reynolds-portrait.jpg" alt="Tom Reynolds, Door County real estate advisor">
+        <picture><source type="image/webp" srcset="assets/tom-reynolds-portrait-480.webp 480w, assets/tom-reynolds-portrait-900.webp 900w" sizes="(max-width: 700px) 100vw, 34vw"><img src="assets/tom-reynolds-portrait.jpg" width="900" height="1231" alt="Tom Reynolds, Door County real estate advisor" class="about-photo reveal" loading="lazy" decoding="async"></picture>
         <div class="about-copy reveal">
           <p class="eyebrow">Door County real estate, personally advised</p>
           <h2>Experience for the decisions that matter.</h2>
@@ -284,13 +269,14 @@
       <div class="wrap">
         <div class="title-row reveal"><div><p class="eyebrow">Local perspective</p><h2>Door County expertise.</h2></div><a class="rule-link" href="#contact">Find your place</a></div>
         <div class="place-grid">
-          <a class="place-card reveal" href="mailto:tomreynolds@coldwellhomes.com?subject=Northern%20Door%20County"><img src="assets/door-county-ephraim-harbor.jpg" alt="Ephraim harbor in Door County"><div class="place-card-content"><small>Explore</small><h3>Northern Door</h3></div></a>
-          <a class="place-card reveal" href="mailto:tomreynolds@coldwellhomes.com?subject=Door%20County%20Waterfront"><img src="assets/door-county-shoreline-sunrise.jpg" alt="Waterfront property in Door County"><div class="place-card-content"><small>Explore</small><h3>Waterfront</h3></div></a>
-          <a class="place-card reveal" href="mailto:tomreynolds@coldwellhomes.com?subject=Door%20County%20Village%20Homes"><img src="assets/door-county-cottage-row-hero.jpg" alt="Tree-lined village street in Door County"><div class="place-card-content"><small>Explore</small><h3>Village Life</h3></div></a>
+          <a class="place-card reveal" href="communities/northern-door.html"><picture><source type="image/webp" srcset="assets/door-county-ephraim-harbor-720.webp 720w, assets/door-county-ephraim-harbor-1600.webp 1600w" sizes="(max-width: 700px) 100vw, 34vw"><img src="assets/door-county-ephraim-harbor.jpg" width="1672" height="941" alt="Ephraim harbor in Door County" class="" loading="lazy" decoding="async"></picture><div class="place-card-content"><small>Explore</small><h3>Northern Door</h3></div></a>
+          <a class="place-card reveal" href="blog/buying-door-county-waterfront.html"><picture><source type="image/webp" srcset="assets/door-county-shoreline-sunrise-720.webp 720w, assets/door-county-shoreline-sunrise-1600.webp 1600w" sizes="(max-width: 700px) 100vw, 34vw"><img src="assets/door-county-shoreline-sunrise.jpg" width="1672" height="941" alt="Waterfront property in Door County" class="" loading="lazy" decoding="async"></picture><div class="place-card-content"><small>Explore</small><h3>Waterfront</h3></div></a>
+          <a class="place-card reveal" href="communities.html"><picture><source type="image/webp" srcset="assets/door-county-cottage-row-hero-720.webp 720w, assets/door-county-cottage-row-hero-1600.webp 1600w" sizes="(max-width: 700px) 100vw, 34vw"><img src="assets/door-county-cottage-row-hero.jpg" width="2200" height="1400" alt="Tree-lined village street in Door County" class="" loading="lazy" decoding="async"></picture><div class="place-card-content"><small>Explore</small><h3>Village Life</h3></div></a>
         </div>
       </div>
     </section>
 
+<section class="home-local section-space"><div class="wrap"><p class="eyebrow">One county. Distinct places to call home.</p><h2 class="section-title">Door County real estate, with local context.</h2><p class="home-lead">Explore Fish Creek, Sturgeon Bay, Sister Bay, Ephraim, Egg Harbor, Baileys Harbor and the communities beyond. Compare the setting, the ownership responsibilities and the way you want to use the property.</p><div class="community-links"><a href="communities/fish-creek.html"><strong>Fish Creek</strong><span>Northern Door · Green Bay side</span></a><a href="communities/sturgeon-bay.html"><strong>Sturgeon Bay</strong><span>Central Door · City and surrounding town</span></a><a href="communities/sister-bay.html"><strong>Sister Bay</strong><span>Northern Door · Village waterfront</span></a><a href="communities/ephraim.html"><strong>Ephraim</strong><span>Northern Door · Historic village</span></a><a href="communities/egg-harbor.html"><strong>Egg Harbor</strong><span>Mid-peninsula · Green Bay side</span></a><a href="communities/baileys-harbor.html"><strong>Baileys Harbor</strong><span>Mid-peninsula · Lake Michigan side</span></a><a href="communities/jacksonport.html"><strong>Jacksonport</strong><span>Mid-peninsula · Lake Michigan side</span></a><a href="communities/northern-door.html"><strong>Ellison Bay, Gills Rock &amp; Northern Door</strong><span>Liberty Grove · Northern peninsula</span></a><a href="communities/washington-island.html"><strong>Washington Island</strong><span>Town of Washington · Island ownership</span></a><a href="communities/southern-door.html"><strong>Southern Door &amp; Rural Communities</strong><span>Brussels · Forestville · Surrounding towns</span></a></div><div class="actions"><a class="button" href="communities.html">All communities & municipalities</a><a class="button outline" href="https://www.tomreynoldsrealestate.com/quick-search">Search current properties</a></div><p class="fine">Property search opens Tom’s existing search website. The community directory includes every municipality and helps you identify the right local office.</p></div></section>
     <section class="experience">
       <div class="wrap experience-grid">
         <div class="reveal">
@@ -299,10 +285,11 @@
           <p>Market information is everywhere. Knowing which details deserve your attention—and which do not—takes experience. Tom brings the context, judgment and direct communication needed to move forward with confidence.</p>
           <a class="rule-link" href="tel:+14144608899">Call Tom directly</a>
         </div>
-        <div class="experience-visual reveal"><img src="assets/tom-reynolds-portrait.jpg" alt="Portrait of Tom Reynolds"><div class="experience-note"><strong>Direct.</strong><span>One advisor. Every step.</span></div></div>
+        <div class="experience-visual reveal"><picture><source type="image/webp" srcset="assets/tom-reynolds-portrait-480.webp 480w, assets/tom-reynolds-portrait-900.webp 900w" sizes="(max-width: 700px) 100vw, 34vw"><img src="assets/tom-reynolds-portrait.jpg" width="900" height="1231" alt="Portrait of Tom Reynolds" class="" loading="lazy" decoding="async"></picture><div class="experience-note"><strong>Direct.</strong><span>One advisor. Every step.</span></div></div>
       </div>
     </section>
 
+<section id="blog" class="home-journal section-space"><div class="wrap"><p class="eyebrow">Door County Field Notes</p><h2 class="section-title">Useful before the next decision.</h2><p class="home-lead">Local context for waterfront purchases, second homes and a thoughtful sale. Read the questions worth asking before you commit.</p><div class="editorial-grid"><article class="editorial-card" data-search="Buying Door County Waterfront: A Practical Due-Diligence Guide Waterfront" data-category="Waterfront"><picture><source type="image/webp" srcset="assets/door-county-limestone-bluff-720.webp 720w, assets/door-county-limestone-bluff-1600.webp 1600w" sizes="(max-width: 700px) 100vw, 34vw"><img src="assets/door-county-limestone-bluff.jpg" width="1672" height="941" alt="Door County landscape; illustrative property guide image" class="" loading="lazy" decoding="async"></picture><div class="card-copy"><p class="eyebrow">Waterfront · <time datetime="2026-11-07">November 7, 2026</time></p><h2><a href="blog/buying-door-county-waterfront.html">Buying Door County Waterfront: A Practical Due-Diligence Guide</a></h2><p>A view can make a showing memorable. Ownership rights, site conditions and a workable maintenance plan are what help determine whether a waterfront home will serve you well after closing.</p><a class="text-link" href="blog/buying-door-county-waterfront.html">Read the field note <span aria-hidden="true">→</span></a></div></article><article class="editorial-card" data-search="Can You Rent a Door County Second Home? Start With This Checklist Second homes" data-category="Second homes"><picture><source type="image/webp" srcset="assets/door-county-cottage-row-hero-720.webp 720w, assets/door-county-cottage-row-hero-1600.webp 1600w" sizes="(max-width: 700px) 100vw, 34vw"><img src="assets/door-county-cottage-row-hero.jpg" width="2200" height="1400" alt="Door County landscape; illustrative property guide image" class="" loading="lazy" decoding="async"></picture><div class="card-copy"><p class="eyebrow">Second homes · <time datetime="2026-11-07">November 7, 2026</time></p><h2><a href="blog/door-county-short-term-rental-checklist.html">Can You Rent a Door County Second Home? Start With This Checklist</a></h2><p>If a purchase depends on renting the home, establish the permitted use and operating responsibilities before relying on an income estimate. A listing’s rental history does not answer every question for a new owner or a new business plan.</p><a class="text-link" href="blog/door-county-short-term-rental-checklist.html">Read the field note <span aria-hidden="true">→</span></a></div></article><article class="editorial-card" data-search="Preparing to Sell a Door County Home: A Property-First Plan Selling" data-category="Selling"><picture><source type="image/webp" srcset="assets/door-county-cottage-row-hero-720.webp 720w, assets/door-county-cottage-row-hero-1600.webp 1600w" sizes="(max-width: 700px) 100vw, 34vw"><img src="assets/door-county-cottage-row-hero.jpg" width="2200" height="1400" alt="Door County landscape; illustrative property guide image" class="" loading="lazy" decoding="async"></picture><div class="card-copy"><p class="eyebrow">Selling · <time datetime="2026-11-07">November 7, 2026</time></p><h2><a href="blog/selling-a-door-county-home.html">Preparing to Sell a Door County Home: A Property-First Plan</a></h2><p>A useful selling plan begins before photography or the first showing. It gives buyers enough information to understand the home and gives you a workable path from preparation to negotiation.</p><a class="text-link" href="blog/selling-a-door-county-home.html">Read the field note <span aria-hidden="true">→</span></a></div></article></div><a class="text-link library-more" href="blog/">Explore all field notes →</a></div></section><section id="videos" class="home-video section-space"><div class="wrap"><p class="eyebrow">Watch Door County</p><h2 class="section-title">See the place. Ask better questions.</h2><p class="home-lead">Official Destination Door County films, clearly credited and paired with practical property-viewing notes. These are tourism films, not Tom’s recordings or listing tours.</p><div class="editorial-grid video-grid"><article class="editorial-card"><a class="video-poster" href="videos/winter-enchanted.html" aria-label="Watch Door County in Winter: Enchanted"><img src="https://i.ytimg.com/vi/keqjENxKacU/hqdefault.jpg" width="1280" height="720" alt="Door County - Winter - Enchanted video thumbnail" loading="lazy" decoding="async"><span class="play-badge" aria-hidden="true">▶</span></a><div class="card-copy"><p class="eyebrow">Destination Door County · Short film</p><h2><a href="videos/winter-enchanted.html">Door County in Winter: Enchanted</a></h2><p>A short winter film from Destination Door County, followed by a practical way to think about a home beyond the summer season.</p><a class="text-link" href="videos/winter-enchanted.html">Watch the film <span aria-hidden="true">→</span></a></div></article><article class="editorial-card"><a class="video-poster" href="videos/summer-serene.html" aria-label="Watch Summer in Door County: Serene"><img src="https://i.ytimg.com/vi/xHGBEWh1xDU/maxresdefault.jpg" width="1280" height="720" alt="Summer in Door County - Serene video thumbnail" loading="lazy" decoding="async"><span class="play-badge" aria-hidden="true">▶</span></a><div class="card-copy"><p class="eyebrow">Destination Door County · Short film</p><h2><a href="videos/summer-serene.html">Summer in Door County: Serene</a></h2><p>Destination Door County’s summer film offers a sense of the peninsula. Pair that inspiration with a clear reading of the property you are considering.</p><a class="text-link" href="videos/summer-serene.html">Watch the film <span aria-hidden="true">→</span></a></div></article><article class="editorial-card"><a class="video-poster" href="videos/summer-tranquil.html" aria-label="Watch Summer in Door County: Tranquil"><img src="https://i.ytimg.com/vi/hTh_FNAGX-E/maxresdefault.jpg" width="1280" height="720" alt="Summer in Door County - Tranquil video thumbnail" loading="lazy" decoding="async"><span class="play-badge" aria-hidden="true">▶</span></a><div class="card-copy"><p class="eyebrow">Destination Door County · Short film</p><h2><a href="videos/summer-tranquil.html">Summer in Door County: Tranquil</a></h2><p>A short summer film from Destination Door County can be the start of a place conversation, not the end of the property research.</p><a class="text-link" href="videos/summer-tranquil.html">Watch the film <span aria-hidden="true">→</span></a></div></article></div><a class="text-link library-more" href="videos.html">Visit the video library →</a></div></section>
     <section class="contact" id="contact">
       <div class="contact-inner reveal">
         <p class="eyebrow">The next move starts with a conversation</p>
@@ -313,17 +300,8 @@
     </section>
   </main>
 
-  <footer><div class="wrap footer-row"><span>© 2026 Tom Reynolds · Coldwell Banker Real Estate Group · Equal Housing Opportunity</span><span>Door County, Wisconsin · <a href="local-news.html">Local guides</a> · <a href="photo-credits.html">Photo credits</a> · <a href="#top">Back to top ↑</a></span></div><p style="width:min(1280px,calc(100% - 48px));margin:18px auto 0;font-size:.7rem;color:#aaa">4140 Bluff Ln., Fish Creek, WI 54212 · <a href="mailto:TomReynolds@coldwellhomes.com">TomReynolds@coldwellhomes.com</a></p></footer>
+<footer class="reading-footer"><div class="reading-wrap"><a class="footer-name" href="index.html">Tom Reynolds</a><p>Coldwell Banker Real Estate Group<br>4140 Bluff Ln., Fish Creek, WI 54212<br><a href="tel:+14144608899">(414) 460-8899</a> · <a href="mailto:TomReynolds@coldwellhomes.com">Email Tom</a></p><nav aria-label="Footer"><a href="communities.html">Communities</a><a href="blog/">Blog</a><a href="videos.html">Videos</a><a href="local-news.html">Official resources</a><a href="about.html">About Tom</a><a href="feed.xml">RSS</a><a href="photo-credits.html">Photo credits</a></nav><p class="fine">© 2026 Tom Reynolds · Equal Housing Opportunity. General planning information, not property-specific legal, tax, engineering or insurance advice. Confirm current details with the appropriate authority and qualified professionals.</p></div></footer>
 
-  <script>
-    const body=document.body,overlay=document.querySelector('.menu-overlay');
-    const setMenu=open=>{body.classList.toggle('menu-open',open);overlay.setAttribute('aria-hidden',String(!open));document.querySelector('.menu-button').setAttribute('aria-expanded',String(open));};
-    document.querySelector('.menu-button').addEventListener('click',()=>setMenu(true));
-    document.querySelector('.menu-close').addEventListener('click',()=>setMenu(false));
-    document.querySelectorAll('.menu-list a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
-    document.addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false)});
-    const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if(!reduced){const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal:not(.visible)').forEach(el=>io.observe(el));}else{document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'));}
-  </script>
+  <script src="assets/site.js" defer></script>
 </body>
 </html>
