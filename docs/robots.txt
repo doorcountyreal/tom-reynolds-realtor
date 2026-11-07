@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://doorcountyreal.github.io/tom-reynolds-realtor/sitemap.xml
